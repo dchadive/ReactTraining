@@ -21,6 +21,12 @@ function Post({title, index}) {
 
       <div className='post'>
         {title}<br/>
+        {addedComments.length > 0 ? 
+          <div>Number of Comments: {addedComments.length} </div>
+          :
+          <div>No Comments Yet</div> 
+          }  
+        <br/>
         <div className='comment-list'>{addedComments}</div>
         Comment<br/>
         <input type='text' value={commentVal} onChange={handleChange}></input><br/>
